@@ -1,0 +1,26 @@
+<div class="section">
+    <h3 class="subtitle is-3">Chat de {{username}}</h3>
+
+{{#each messages}}
+<article class="message is-link">
+    <div class="message-header">
+        <h3>{{username}} dice:</h3>
+    </div>
+    <div class="message-body">
+        <p>{{message}}</p>
+    </div>
+</article>
+{{/each}}
+
+<form action="/api/chat" method="post">
+        <div class="mb-3">
+            <input type="text" name="username" class="form-control" value="{{username}}" aria-label="Disabled input example" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Manda un mensaje</label>
+            <textarea type="text" class="form-control" name="message" id="message" rows="3"></textarea>
+            <br>
+            <button type="button submit" class="btn btn-primary" value="SEND">Enviar</button>
+        </div>
+    </form>
+</div>

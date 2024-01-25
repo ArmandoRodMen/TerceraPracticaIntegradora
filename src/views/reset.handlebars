@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <h1 class="display-4">Restaurar!</h1>
+    <div class="container-fluid">
+        <form id="resetForm" action="/reset/{{token}}" method="post">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Repetir Password</label>
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Password">
+                <div id="passwordMismatch" style="color: red; display: none;">Las contraseñas no coinciden.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="return validatePasswords()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validatePasswords() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                document.getElementById("passwordMismatch").style.display = "block";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</div>

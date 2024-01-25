@@ -1,0 +1,22 @@
+<div class="section">
+    <a class="btn btn-warning" href="/api/sessions/current">Checar mi rol</a>
+    <a class="btn btn-info" href="/api/chat">Chat</a>
+    <h2 class="subtitle is-2">Los productos son: </h2>
+
+    {{#each products}}
+        <div class="section" >
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{product.thumbnail}}" width="100" alt="{{product.description}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">Precio: $ {{product.price}}</p>
+                    <p class="card-text">Stock: {{product.stock}}</p>
+                    <p class="card-text">Category: {{product.category}}</p>
+                    <br>
+                    <button type="button" class="btn btn-success">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

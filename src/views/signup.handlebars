@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <h1 class="display-4">Sign Up!</h1>
+    <br>
+    <div class="container-fluid">
+        <form action="api/sessions/signup" method ="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="emailHelp" placeholder="Enter First Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" name="last_name" id="last_name" aria-describedby="emailHelp" placeholder="Enter Last Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" value="SIGNUP">Sign Up</button>
+            <button class="btn btn-outline-info"><a href="/login">LogIn</a></button>
+            <button type="button" onclick="location.href='/api/sessions/auth/github'" class="btn btn-dark">Sign Up with GitHub</button>
+            <button type="button" onclick="location.href='/api/sessions/auth/google'" class="btn btn-info">Sign Up with Google</button>
+        </form>
+    </div>
+</div>

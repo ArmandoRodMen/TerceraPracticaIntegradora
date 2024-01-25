@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <h1 class="display-4">Log in!</h1>
+    <div class="container-fluid">
+        <form action="api/sessions/login" method ="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="button submit" class="btn btn-primary" value="SIGNUP">Submit</button>
+            <button class="btn btn-outline-info"><a href="/signup">Sign Up</a></button>
+            <button class="btn btn-outline-danger"><a href="/restaurar">Restaurar Contraseña</a></button>
+            <button type="button" onclick="location.href='/api/sessions/auth/github'" class="btn btn-dark">Sign Up with GitHub</button>
+
+        </form>
+    </div>
+</div>
